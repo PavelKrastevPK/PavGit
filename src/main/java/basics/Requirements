@@ -1,0 +1,48 @@
+BeautifulSwaps
+
+Whenever George asks Lily to hang out, she's busy doing homework. George wants to help her finish it faster,
+but he's in over his head! Can you help George understand Lily's homework so she can hang out with him?
+
+Consider an array of "n" distinct integers,arr=[a[0],a[1],a[2],..a[n--1] . George can swap any two elements of
+the array any number of times.
+An array is beautiful if the sum of [arr[i]--arr[i--1] among 0<i<n is minimal.
+
+Given the array , determine and return the minimum number of swaps that should be performed in order to make
+the array beautiful.
+
+Example
+arr=[7, 15, 12, 3]
+
+One minimal array is [3, 7, 12, 15] . To get there, George performed the following swaps:
+     [3, 7, 12, 15]
+3,7  [3, 15, 12, 7]
+7,15 [3, 7, 12, 15]
+
+It took  swaps to make the array beautiful. This is minimal among the choices of beautiful arrays possible.
+
+Returns
+
+int: the minimum number of swaps required:
+
+Example
+Input:
+STDIN       Function
+-----       --------
+4           arr[]size n = 4
+2 5 3 1     arr = [2, 5, 3, 1]
+
+Output:
+2
+
+
+NAME AND HOBBY
+    write a program that reads from the console for name,hobby and age (for driving licence)
+    reads it and display it in the console
+
+Variables
+          1/ Add a string variable to an existing string. Example:
+          “My name is <Test>” replace test with something that is added from the console.
+          2/ Compare 2 strings if they are equals. Display the result in the console.
+          3/ Count how many words does a string has (remove any spaces)
+          -Display the result in the console.
+          4/ Combine two strings together and display the result in the console.

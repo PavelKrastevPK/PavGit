@@ -1,4 +1,4 @@
-package Basics;
+package basics;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -20,20 +20,13 @@ public class Variables {
         String testString = ("Your first random string is: '"
                 + a + "' and the second one is: '" + b + "'" + "\nThey are equals -" + a.equals(b));
         System.out.println(testString);
+
+        String removeSpace = testString.replace(" ", "");
+//3
+        System.out.println("This is how many letters we have in our string: " + removeSpace.length());
+//4
         System.out.println(a + b);
-        String removeSpace = testString.replace(" ","");
-        System.out.println("This is how many words we have in our string: "+removeSpace.length());
-
-
-        //byte dedovUi = 7;
-        //for (byte dedovUi = 0; dedovUi <10 ; dedovUi++) {
-        //    System.out.println(dedovUi);
-
-            for (int dedov = 0, ui = 15 - 1; dedov < 10 / 2; dedov++, ui--) {
-                System.out.println(dedov+"a"+ui);
-            }
-        }
-
+    }
 
     private static String randomThreeLetters() {
         String alphabet = "AB1";

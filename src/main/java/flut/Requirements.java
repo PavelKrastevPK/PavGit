@@ -1,4 +1,4 @@
-package Flut;
+package flut;
 
 public class Requirements {
     /*Todo Story Story 'Trading of fluts'

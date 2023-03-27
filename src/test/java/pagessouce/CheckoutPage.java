@@ -1,4 +1,4 @@
-package PagesSouce;
+package pagessouce;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -6,19 +6,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class CheckoutPage {
-    @FindBy(xpath = "//*[@id='checkout']")
+    private WebDriver driver;
+    @FindBy(id="checkout")
     private WebElement checkoutButton;
-    @FindBy(xpath = "//*[@id='first-name']")
+    @FindBy(id = "first-name")
     private WebElement firstName;
-    @FindBy(xpath= "//*[@id='last-name']")
+    @FindBy(id="last-name")
     private WebElement lastName;
-    @FindBy(xpath = "//*[@id='postal-code']")
+    @FindBy(id="postal-code")
     private WebElement postCode;
-    @FindBy(xpath = "//*[@id='continue']")
+    @FindBy(id="continue")
     private WebElement continueDetailsPage;
-    @FindBy(xpath = "//*[@id='finish']")
+    @FindBy(id="finish")
     private WebElement finish;
-    @FindBy(xpath = "//*[@id='checkout_complete_container']")
+    @FindBy(id="checkout_complete_container")
     private WebElement purchaseMade;
 
 
@@ -39,6 +40,7 @@ public class CheckoutPage {
         finish.click();
 
     }
+    // Todo is displayed is not working
     public boolean completedPurchase(){
         if (purchaseMade.isDisplayed()){
             return true;

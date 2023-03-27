@@ -1,0 +1,20 @@
+Create automation test case for this website:  https://www.saucedemo.com/:
+1.	Have a successful login.
+2.	Have an unsuccessful login.
+3.	Add items (you should have two items that are shown in the cart element) to the cart.
+4.	Checkout on added items in the cart (those items must be different from №3)
+5.	For additional points: check what bugs does the problem users have. (login with them)
+Make a test with one of the problem users account. (That means a test that will fail.)
+
+
+Scoring:
+//Todo 1.	Project is in Page Object Model  - 10 points
+//Todo 2.	Проекта поддържа два браузъра - хром и файрфокс - 10 points
+//Todo 3.	Избор на браузър и урл се подават като конфигурация - 10 points
+4.	Every driver is closed after test completion - 10 points
+5.	Every test is in separate class - 10 points
+6.	Паралелно изпълнение на тестове (поне два паралелни) - 10 points
+//Todo 7.	Тестови данни се пазаят (и четат от) csv file - 10 points
+8.	Implicit wait is used - 10 points
+9.	Explicit wait is used - 10 points
+10.	Assert is used- 10 points

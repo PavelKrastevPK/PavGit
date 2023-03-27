@@ -1,4 +1,4 @@
-package PagesSouce;
+package pagessouce;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -6,14 +6,14 @@ import org.openqa.selenium.support.PageFactory;
 
 
 public class LoginPage {
-    protected WebDriver driver;
-    @FindBy(xpath = "//*[@id='login-button']")
+    private WebDriver driver;
+    @FindBy(id="login-button")
     private WebElement loginButton;
 
-    @FindBy(xpath = "//*[@id='user-name']")
+    @FindBy(id="user-name")
     private WebElement userNameInput;
 
-    @FindBy(xpath = "//*[@id='password']")
+    @FindBy(id="password")
     private WebElement passwordInput;
 
     @FindBy(xpath = "//*[text()='Epic sadface: Password is required']")

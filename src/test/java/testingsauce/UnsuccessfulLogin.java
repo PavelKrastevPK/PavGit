@@ -1,9 +1,8 @@
-package TestingSouce;
+package testingsauce;
 
-import Base.TestUtil;
-import PagesSouce.LoginPage;
-import PagesSouce.ProductPage;
-import org.testng.Assert;
+import base.TestUtil;
+import pagessouce.LoginPage;
+import pagessouce.ProductPage;
 import org.testng.annotations.Test;
 
 public class UnsuccessfulLogin extends TestUtil {
@@ -11,7 +10,6 @@ public class UnsuccessfulLogin extends TestUtil {
     public void newTest() {
         LoginPage loginPage = new LoginPage(driver);
         ProductPage productPage = loginPage.login("standard_user", "wrong");
-
         productPage.logOut();
     }
 }

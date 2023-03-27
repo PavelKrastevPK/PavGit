@@ -1,4 +1,4 @@
-package Flut;
+package flut;
 
 public class Fluts {
     public static void main(String[] args) {

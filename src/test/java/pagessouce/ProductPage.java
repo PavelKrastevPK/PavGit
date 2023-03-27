@@ -1,4 +1,4 @@
-package PagesSouce;
+package pagessouce;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
@@ -7,12 +7,13 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+
 public class ProductPage {
-    protected WebDriver driver;
+    private WebDriver driver;
     @FindBy(xpath = "//*[text()='Open Menu']")
     private WebElement menuBar;
 
-    @FindBy(xpath = "//*[@id='logout_sidebar_link']")
+    @FindBy(id="logout_sidebar_link")
     private WebElement logOutButton;
 
     @FindBy(className = "shopping_cart_link")
@@ -30,6 +31,7 @@ public class ProductPage {
     }
 
     public void logOut() {
+//Todo this is not working is displayed must be element present
         if (menuBar.isDisplayed()) {
             menuBar.click();
             logOutButton.click();
@@ -38,9 +40,10 @@ public class ProductPage {
         }
     }
 
+
+
     public void addItemsToTheCart(String... products) {
         for (String productName : products) {
-
             String xpathOfTheElementToBeAdded = String.format(ADD_TO_CARD_LOCATOR, productName);
             WebElement addToCardButton = driver.findElement(By.xpath(xpathOfTheElementToBeAdded));
             addToCardButton.click();
@@ -51,7 +54,7 @@ public class ProductPage {
         try {
             return Integer.parseInt(shoppingCartContainer.getText());
         } catch (NoSuchElementException e) {
-            System.out.println("shopping card is empty");
+            System.out.println("Shopping cart is empty");
             return 0;
         }
 
@@ -59,6 +62,6 @@ public class ProductPage {
 
     public CheckoutPage checkout() {
         shoppingCardLink.click();
-        return new CheckoutPage(driver);
+     return new CheckoutPage(driver);
     }
 }
