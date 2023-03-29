@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 
 public class ProblemUserTests extends TestUtil {
     @Test
-    public void newTest() {
+    private void newTest() {
         LoginPage loginPage = new LoginPage(driver);
         ProductPage productPage = loginPage.login("problem_user", "secret_sauce");
         productPage.addItemsToTheCart("bolt-t-shirt");

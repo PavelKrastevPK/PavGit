@@ -10,10 +10,10 @@ import org.openqa.selenium.support.PageFactory;
 
 public class ProductPage {
     private WebDriver driver;
-    @FindBy(xpath = "//*[text()='Open Menu']")
+    @FindBy(id = "react-burger-menu-btn")
     private WebElement menuBar;
 
-    @FindBy(id="logout_sidebar_link")
+    @FindBy(id = "logout_sidebar_link")
     private WebElement logOutButton;
 
     @FindBy(className = "shopping_cart_link")
@@ -31,7 +31,6 @@ public class ProductPage {
     }
 
     public void logOut() {
-//Todo this is not working is displayed must be element present
         if (menuBar.isDisplayed()) {
             menuBar.click();
             logOutButton.click();
@@ -39,8 +38,6 @@ public class ProductPage {
             System.out.println("Menu bar is not displayed");
         }
     }
-
-
 
     public void addItemsToTheCart(String... products) {
         for (String productName : products) {
@@ -62,6 +59,6 @@ public class ProductPage {
 
     public CheckoutPage checkout() {
         shoppingCardLink.click();
-     return new CheckoutPage(driver);
+        return new CheckoutPage(driver);
     }
 }

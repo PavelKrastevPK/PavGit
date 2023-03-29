@@ -8,13 +8,13 @@ Make a test with one of the problem users account. (That means a test that will 
 
 
 Scoring:
-1.	Project is in Page Object Model  - 10 points
-2.	Two type of browsers are supported (Chrome/Firefox) - 10 points
-3.	Browser and URL are given as configuration - 10 points
+//Todo 1.	Project is in Page Object Model  - 10 points
+//Todo 2.	Проекта поддържа два браузъра - хром и файрфокс - 10 points
+//Todo 3.	Избор на браузър и урл се подават като конфигурация - 10 points
 4.	Every driver is closed after test completion - 10 points
 5.	Every test is in separate class - 10 points
-6.	Tests are performed simultaneously  (minimum 2 tests) - 10 points
-7.	Test date is stored in csv file - 10 points
+6.	Паралелно изпълнение на тестове (поне два паралелни) - 10 points
+//Todo 7.	Тестови данни се пазаят (и четат от) csv file - 10 points
 8.	Implicit wait is used - 10 points
 9.	Explicit wait is used - 10 points
 10.	Assert is used- 10 points

@@ -1,26 +1,18 @@
 package base;
 
-import com.opencsv.exceptions.CsvException;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.FluentWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
-import utils.CsvLogic;
 
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Collections;
 import java.util.Properties;
 
-public class TestUtil {
+public class TestUtilJala {
     public WebDriver driver;
     private String url;
     private int implicitWait;
@@ -37,7 +29,7 @@ public class TestUtil {
     }
 
     private void setupBrowserDriver() {
-        try (FileInputStream configFile = new FileInputStream("src/test/resources/Saucedemo/")) {
+        try (FileInputStream configFile = new FileInputStream("src/test/resources/JalaData/")) {
             Properties config = new Properties();
             config.load(configFile);
             url = config.getProperty("urlAddress");
@@ -52,7 +44,6 @@ public class TestUtil {
                 break;
             case "chrome":
                 createGetChromeDriver(url, implicitWait);
-                break;
             default:
                 throw new IllegalStateException("Unsupported browser type");
         }
@@ -75,16 +66,5 @@ public class TestUtil {
         driver = new EdgeDriver();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(implicitWait));
         loadUrl(url);
-    }
-    @DataProvider(name = "csvUserList")
-    public static Object[][] readUsersFromCsvFile() throws IOException, CsvException {
-        return CsvLogic.readCsvFile("src/test/resources/SauceU&P.csv/");
-    }
-    public void explicitWait(String element) {
-        FluentWait waitSeconds = new FluentWait(driver)
-                .withTimeout(Duration.ofSeconds(8))
-                .pollingEvery(Duration.ofSeconds(2))
-                .ignoreAll(Collections.singleton(NoSuchElementException.class));
-        waitSeconds.until(ExpectedConditions.elementToBeClickable(By.id(element)));
     }
 }

@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 public class CheckoutTest extends TestUtil {
     @Test
-    public void checkout() {
+    private void checkout() {
         LoginPage loginPage = new LoginPage(driver);
         ProductPage productPage = loginPage.login("standard_user", "secret_sauce");
         productPage.addItemsToTheCart("fleece-jacket","onesie","bolt-t-shirt" );

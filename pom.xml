@@ -20,7 +20,7 @@
     <maven-annotations>3.2</maven-annotations>
     <plexus-utils>3.0.8</plexus-utils>
     <junit>4.8.2</junit>
-    <selenium>4.8.1</selenium>
+    <selenium>4.8.3</selenium>
     <testing>7.7.1</testing>
     <webDriverManager>5.3.2</webDriverManager>
     <openCSV>5.7.1</openCSV>
