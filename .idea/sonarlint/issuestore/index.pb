@@ -1,3 +1,25 @@
 
 a
 1src/test/java/TestingSauce/UnsuccessfulLogin.java,6\c\6ca492fc816cbfee30301d67883b9b22fc17e8f6
+d
+4src/main/java/basics/integrationtesting/Balance.java,2\2\22863060601d52d89136497327af0a125aab5d06
+e
+5src/main/java/basics/integrationtesting/Transfer.java,c\3\c3bc0223381c1bc97e999e449d297ff801383f24
+e
+5src/main/java/basics/integrationtesting/Database.java,a\a\aa4561e79a57544c9617275c781b1feefc3f79fc
+J
+src/test/java/Requirements,5\f\5f4cc07ab2bb656d308a8d93d90d1779be838c2c
+Å
+Q.idea/sonarlint/securityhotspotstore/6/c/6ca492fc816cbfee30301d67883b9b22fc17e8f6,e\a\eaff21118b5295387b06e67fb411d67b30b60654
+T
+$src/test/java/base/TestUtilJala.java,7\e\7ea8db2c8c21fd2b142108b00bdfae3712485735
+`
+0src/test/java/jalatechnologies/JalaHomePage.java,7\e\7eb910fc06b83435767e58cba1436161dd74c97e
+a
+1src/test/java/jalatechnologies/JalaLoginPage.java,2\e\2e2dbe08e3ec8a0d3301de21da5ffa96857be06d
+_
+/src/test/java/jalatechnologies/JalaTesting.java,e\a\eab66f0790d0ac1c913c28d23aa1f23625993f10
+i
+9src/main/java/basics/masterClass/MasterClassSection6.java,2\e\2e7b9287a49035620ad1ecf357405eacb46d51fa
+d
+4src/test/java/testingsauce/AddingItemsToTheCart.java,6\7\67be8d312bbb9e7d2653b1d12197561408d03abe

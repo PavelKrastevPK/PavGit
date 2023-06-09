@@ -1,10 +1,9 @@
 package base;
-
 import com.opencsv.exceptions.CsvException;
 import io.github.bonigarcia.wdm.WebDriverManager;
-import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,7 +12,6 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import utils.CsvLogic;
-
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.time.Duration;
@@ -80,11 +78,11 @@ public class TestUtil {
     public static Object[][] readUsersFromCsvFile() throws IOException, CsvException {
         return CsvLogic.readCsvFile("src/test/resources/SauceU&P.csv/");
     }
-    public void explicitWait(String element) {
-        FluentWait waitSeconds = new FluentWait(driver)
-                .withTimeout(Duration.ofSeconds(8))
+    public void explicitWait(WebElement element, WebDriver setDriver,int seconds) {
+        FluentWait waitSeconds = new FluentWait(setDriver)
+                .withTimeout(Duration.ofSeconds(seconds))
                 .pollingEvery(Duration.ofSeconds(2))
                 .ignoreAll(Collections.singleton(NoSuchElementException.class));
-        waitSeconds.until(ExpectedConditions.elementToBeClickable(By.id(element)));
+        waitSeconds.until(ExpectedConditions.visibilityOf(element));
     }
 }

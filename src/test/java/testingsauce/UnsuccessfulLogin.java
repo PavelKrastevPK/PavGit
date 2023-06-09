@@ -9,8 +9,8 @@ public class UnsuccessfulLogin extends TestUtil {
     @Test
     private void newTest() {
         LoginPage loginPage = new LoginPage(driver);
-        ProductPage productPage = loginPage.login("standard_user", "wrong");
-        productPage.logOut();
+        loginPage.login("standard_user", "wrong");
+loginPage.unsuccessfulLogin();
     }
 }
 

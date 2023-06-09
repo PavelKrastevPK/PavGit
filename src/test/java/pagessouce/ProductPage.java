@@ -1,5 +1,6 @@
 package pagessouce;
 
+import base.TestUtil;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -31,12 +32,10 @@ public class ProductPage {
     }
 
     public void logOut() {
-        if (menuBar.isDisplayed()) {
-            menuBar.click();
-            logOutButton.click();
-        } else {
-            System.out.println("Menu bar is not displayed");
-        }
+        TestUtil testUtil = new TestUtil();
+        testUtil.explicitWait(menuBar, driver,8);
+        menuBar.click();
+        logOutButton.click();
     }
 
     public void addItemsToTheCart(String... products) {

@@ -1,0 +1,33 @@
+Activate Windows 10 using genuine key. Ask collegues about the key. :D :D :D: D:D
+Install SQL Server 2012 with management tools - ask your collegues about SQL server install files
+Download and install Visual Studio 2022 Community edition from visual studio page. While installing VS choose Custom Install and also install Xamarin tools
+Install Chrome and Firefox
+   Enable Internet Information Services form Add Remove Programs in windows control panel
+      Download the latest version of RavenDB and install in in IIS at port 8100. Create dev database and initialize it.
+Install GitHub for Windows and clone Property repository in "C:\GitHub" folder
+   Install Kdiff3.
+      A way to install it is using Chocolately and the command cinst kdiff3 in cmd.
+      After you install kdiff3 add this lines to your C:\Users\<name>\.gitconfig file
+      [merge]
+          tool = kdiff3
+
+      [mergetool "kdiff3"]
+          path = C:/Program Files/KDiff3/kdiff3.exe
+          keepBackup = false
+          trustExitCode = false
+    Import Visual Studio Settings for code indention.
+
+
+Clone this repository on your machine. We're using GitHub Desktop app for working with GitHub.
+     Download and install the version 5 of RavenDB
+      Install it as an IIS Application at http://localhost:8100/
+      Create a DB named dev
+      Ask your point of contact inside Proper Tech to send you a file to import
+      Inside RavenDB studio go to Tasks>Import Database in the newly created dev db and import the file
+
+      Install a version of SQL Server 2012+ if you don't have one. Create database named Property
+      Install Redis from the .msi installer that you can download here. Follow the installer instructions and use the default port 6379.
+    Update the connection strings inside Property.Web and Property.Admin Web.config to reflect the newly created databases
+      Start Property.Admin, login with admin/admin and create a user inside account Riva Center. Enter a password for the new user to activate it.
+      You can now start and log in Property.Web with your newly created user.
+      Note: When you commit code to the repository don't commit the Web.config-s with the different connection strings.

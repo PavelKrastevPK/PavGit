@@ -1,4 +1,5 @@
 package pagessouce;
+import base.TestUtil;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -36,5 +37,9 @@ public class LoginPage {
 
         loginButton.click();
         return new ProductPage(driver);
+    }
+    public void unsuccessfulLogin(){
+        TestUtil testUtil = new TestUtil();
+        testUtil.explicitWait(incorrectDetailsError,driver,8);
     }
 }
